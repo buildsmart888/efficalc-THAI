@@ -19,7 +19,8 @@ classifiers = [
 dependencies = [
     "latexexpr_efficalc>=0.5.3",
     "pylatexenc>=2.10",
-    "pytest>=8.0.2"
+    "pytest>=8.0.2",
+    "forallpeople>=1.0.0"
 ]
 
 [project.urls]

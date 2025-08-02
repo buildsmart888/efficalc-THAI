@@ -76,7 +76,7 @@ It seems intuitive that the neutral axis should be parallel to the axis of the r
 # Search Algorithm
 ## Summary
 In both search problems, there are two input and two output variables and the target output variables are known. The algorithm is given a starting point, and it proceeds as follows:
-1.	Calculate first derivatives—the full 4x4 Jacobian—at the current input point using finite differences. 
+1.	Calculate first derivatives-the full 4x4 Jacobian-at the current input point using finite differences. 
 2.	Use the derivatives as linear approximations for the two output variables as functions of the two variables and solve for the input point at which both output variables are expected to equal their target values. 
 3.	Move to the input point calculated in (2) and repeat from (1).
 

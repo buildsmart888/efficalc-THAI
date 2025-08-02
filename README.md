@@ -10,9 +10,19 @@
 </p>
 
 
-# efficalc
+# efficalc-THAI
 
-### A feature-rich Python library for reimagined engineering calculations.
+### A feature-rich Python library for reimagined engineering calculations with SI Units and ACI 318M-25 support.
+
+> **🆕 NEW FEATURES**: This enhanced version includes support for **SI Units** and **ACI 318M-25** (Metric) standards!
+
+**Key Enhancements:**
+- 🌍 **SI Units Support**: Complete metric system integration using `forallpeople` library
+- 📊 **ACI 318M-25**: Building Code Requirements for Structural Concrete (Metric version)
+- 🔄 **Unit Conversions**: Seamless Imperial ↔ SI conversions
+- 📋 **Ready Examples**: Concrete design examples with metric units
+
+[📖 **ดู README ภาษาไทย**](README_THAI.md) | [📚 **SI Units Guide**](SI_UNITS_GUIDE.md)
 
 <!-- TABLE OF CONTENTS -->
 <details>

@@ -1,0 +1,53 @@
+
+    <!DOCTYPE html>
+    <html style="background-color: #eeeeee;">
+    <head>
+    <script>
+        window.MathJax = {
+            output: {
+                displayOverflow: "scale",
+            },
+        };
+    </script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.0.0-beta.7/tex-mml-chtml.min.js"></script>
+    <style>
+        body {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            max-width: 850px; 
+        }
+        p {
+            margin-block-start: 0;
+            margin-block-end: 0.5em;
+            line-height: 1.1;
+        }
+        .calc-item {
+            margin-block: 1.5rem;
+        }
+        table {
+          border-collapse: collapse;
+        }
+        td, th {
+          border: 1px solid #bdbdbd;
+          text-align: left;
+          padding: 8px;
+        }
+        th {
+          border-bottom: 2px solid #424242;
+        }
+        table.striped tr:nth-child(even) {
+          background-color: #e0e0e0;
+        }
+        @media print {
+            body {
+                box-shadow: none;
+                max-width: none;
+            }
+        }
+    </style>
+    </head>
+    <body style="margin-inline: auto; padding: 1rem; background-color: #ffffff;">
+    <h1>Steel Beam Size Optimizer (SI Units)</h1><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>Automatically selects the lightest W-shape beam section that can carry the applied moment.</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div><h2>1. Design Parameters</h2><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><div style="display:flex; flex-direction:row; justify-content:flex-start"><p style="width:350px;">Required moment capacity;</p> <p style="display:inline-block; margin-bottom:1rem; margin-left: 3rem">\( M_u =  80 \ \mathrm{kN*m} \)</p></div></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><div style="display:flex; flex-direction:row; justify-content:flex-start"><p style="width:350px;">Unbraced length;</p> <p style="display:inline-block; margin-bottom:1rem; margin-left: 3rem">\( L_b =  4 \ \mathrm{m} \)</p></div></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><div style="display:flex; flex-direction:row; justify-content:flex-start"><p style="width:350px;">Steel yield strength;</p> <p style="display:inline-block; margin-bottom:1rem; margin-left: 3rem">\( F_y =  345 \ \mathrm{MPa} \)</p></div></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div><h2>2. Optimization Process</h2><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>Testing beam sections from lightest to heaviest...</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>Testing W200×15: Capacity = 44.8 kN⋅m</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>Testing W250×18: Capacity = 67.6 kN⋅m</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>Testing W310×21: Capacity = 98.9 kN⋅m</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div><h2>3. Selected Beam Section</h2><div class="calc-item"><p style="margin-left: 2rem;">Optimal beam size</p><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>\[ Selected_Section = {W310×21} \]</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div></div><div class="calc-item"><p style="margin-left: 2rem;">Weight per meter</p><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>\( Section_Weight =  20.9 \ \mathrm{kg/m} \)</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div></div><div class="calc-item"><p style="margin-left: 2rem;">Design moment capacity</p><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>\( Moment_Capacity =  98.89 \ \mathrm{kN*m} \)</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div></div><div class="calc-item"><p style="margin-left: 2rem;">Capacity utilization</p><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>\( Utilization =  80.89 \ \mathrm{%} \)</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div></div><div class="calc-item"><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>\[ \begin{align} Check \ M_u \ &amp; \leq \ 98.89425 \\[4pt] \  80 \ \mathrm{kN*m} \ &amp; \leq \ 98.89425 \\[4pt] &\therefore ✅ ADEQUATE \end{align} \]</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div></div><div style="display:flex; flex-direction:row; justify-content:space-between; margin-left: 2rem;"><div style="display: flex; flex-direction: column; justify-content: center;"><p>The W310×21 beam weighs 20.9 kg/m and provides 98.9 kN⋅m capacity.</p></div> <div style="display: flex; flex-direction: column; justify-content: center;margin-left:1rem;text-wrap:no-wrap;"></div></div>
+    </body>
+    </html>
+    

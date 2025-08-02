@@ -206,7 +206,7 @@ The calculation of variable "c" in this calculation report will now show:
             ∴ sum = 7
 
         A calculated result
-        c = (sum)² = (7)²
+        c = (sum)^2 = (7)^2
           ∴ c = 49
 
 

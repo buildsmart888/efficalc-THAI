@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')  # Use non-interactive backend
 from matplotlib import pyplot as plt
 
 from efficalc import (
@@ -62,7 +64,7 @@ def calculation():
 
     Heading("Deflection Calculation", head_level=2)
     Calculation(
-        "\delta_{max}",
+        r"\delta_{max}",
         (F * a * b * brackets(a + 2 * b) * sqrt(3 * a * brackets(a + 2 * b)))
         / (27 * E * I * L)
         * ft_to_in**3,
@@ -91,7 +93,7 @@ def draw_moment_diagram(
     ]
 
     # Plot the moment diagram
-    fig, ax = set_up_plot(beam_length, "Moment (kip·ft)")
+    fig, ax = set_up_plot(beam_length, "Moment (kip*ft)")
 
     ax.plot(x_list, M_list, label="Moment Diagram", color="blue")
     ax.fill_between(x_list, M_list, alpha=0.1, color="blue")  # Fill under the curve
